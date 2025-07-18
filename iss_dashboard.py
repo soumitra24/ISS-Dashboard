@@ -101,16 +101,6 @@ with info_col:
     else:
         st.info("Astronaut data is currently unavailable.")
 
-# --- Auto-refresh Settings ---
-st.sidebar.title("Settings")
-auto_refresh = st.sidebar.checkbox("Auto-refresh every 10 seconds", value=False)
-
-if auto_refresh:
-    # Use st.empty() placeholder for controlled refresh
-    placeholder = st.empty()
-    with placeholder.container():
-        time.sleep(10)
-        st.rerun()
 
 # --- Footer ---
 st.markdown("---")
